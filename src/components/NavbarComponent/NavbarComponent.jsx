@@ -50,12 +50,12 @@ const NavbarComponent = () => {
   ];
 
   return (
-    <nav className="bg-black text-orange-500 sticky top-0 z-50 shadow-lg">
+    <nav className="bg-black text-orange-500 sticky top-0 z-50 shadow-lg" style={{ boxShadow: '0 4px 10px rgba(255, 165, 0, 0.5)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo Principal */}
-          <Link to="/" className="flex-shrink-0 text-2xl font-bold tracking-wider">
-            Dragon Ball
+          <Link to="/" className="flex-shrink-0 text-2xl font-bold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-600">
+            WIKI DRAGON
           </Link>
 
           {/* Menú de Escritorio */}
@@ -67,7 +67,7 @@ const NavbarComponent = () => {
                 className="flex items-center space-x-2 hover:text-orange-600 transition duration-300 group"
               >
                 <link.logo />
-                <span>{link.name}</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">{link.name}</span>
               </Link>
             ))}
           </div>
@@ -95,7 +95,7 @@ const NavbarComponent = () => {
                   className="flex items-center space-x-4 text-orange-500 hover:bg-orange-900/20 px-3 py-2 rounded-lg transition duration-300"
                 >
                   <link.logo />
-                  <span>{link.name}</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">{link.name}</span>
                 </Link>
               ))}
             </div>
